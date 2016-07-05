@@ -1,7 +1,6 @@
 var express = require('express');
 var app = express();
 
-
 var login = require('./lib/login')
 var signup = require('./lib/signup')
 var userList = require('./lib/user_list')

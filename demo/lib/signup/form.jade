@@ -3,8 +3,10 @@ extend ../views/layout
 
 
 block content
-	form(action='/signup', metho='post')
-		p: input(type='text', placeholder='Username')
-		p: input(type='password', placeholder='Password')
-		p: input(type='password', placeholder='Password confirmation')
-		p: input(type='submit', value='Signup')
+	form(action='/signup', method='post')
+		input(type='text', name='name', placeholder='Username')
+		br
+		input(type='password', name='password', placeholder='Password')
+		br
+		input(type='submit', value='Signup')
+		br
