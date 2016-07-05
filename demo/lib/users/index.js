@@ -28,11 +28,11 @@ exports.create = function(arguments, callback){
 	newuser.save(function (err, saveduser) {
         	// if (err) return console.error(err);
         	if (err) {
-        		return console.error(err)
+        		return callback(err);
         	} else {
-        		return console.log('success')
+        		return callback(err, saveduser)
         	}
 		});
-	// 3. return success or failure
+	// 3. return success or failure using the callback
 
 }

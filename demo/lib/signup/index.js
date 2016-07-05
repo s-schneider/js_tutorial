@@ -14,18 +14,18 @@ function renderform (req, res){
 	res.render('form');
 }
 
-
 app.get('/signup', renderform);
-
 
 function createuser (req, res){
 	// console.log(req.body);
 	
-	users.create(req.body);
+	function callback(err, name){
+		res.json({
+			"New User": name.name
+		});
+	};
 
-	res.json({
-		message: 'success'
-	});
+	users.create(req.body, callback);
 }
 
 app.post('/signup', createuser);

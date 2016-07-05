@@ -7,3 +7,4 @@ app.set('view engine', 'jade');
 app.get('/login', function(req, res){
 	res.render('form');
 });
+
